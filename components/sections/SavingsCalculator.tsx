@@ -38,21 +38,21 @@ export default function SavingsCalculator() {
                             <Calculator className="w-6 h-6" />
                             <span className="text-sm font-bold uppercase tracking-wider">Savings Estimator</span>
                         </div>
-                        <h2 className="text-4xl lg:text-5xl font-light tracking-tighter mb-6">
+                        <h2 className="text-4xl lg:text-5xl font-light tracking-tighter mb-6" style={{ color: 'white' }}>
                             Calculate Your <span className="text-tesla-primary">Solar Potential</span>
                         </h2>
-                        <p className="text-lg text-gray-400 mb-8 max-w-xl font-light leading-relaxed">
+                        <p className="text-lg text-gray-400 mb-8 max-w-xl font-light leading-relaxed" style={{ color: 'white' }}>
                             Stop renting your power. Own it. See how much you could save over the next 20 years by switching to solar today in Malawi.
                         </p>
 
-                        <ul className="space-y-4 mb-8 text-gray-300">
+                        <ul className="space-y-4 mb-8 text-gray-300" style={{ color: 'white' }}>
                             <li className="flex items-center gap-3">
                                 <Sun className="w-5 h-5 text-tesla-primary" />
-                                <span>Increase your property value immediately</span>
+                                <span style={{ color: 'white' }}>Increase your property value immediately</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Banknote className="w-5 h-5 text-tesla-primary" />
-                                <span>Lock in your energy rates for 25+ years</span>
+                                <span style={{ color: 'white' }}>Lock in your energy rates for 25+ years</span>
                             </li>
                         </ul>
 
@@ -73,7 +73,7 @@ export default function SavingsCalculator() {
                         className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 lg:p-10"
                     >
                         <div className="mb-10">
-                            <label className="block text-sm font-medium text-gray-300 mb-4">
+                            <label className="block text-sm font-medium text-white mb-4" style={{ color: 'white' }}>
                                 Average Monthly Electricity Bill (MWK)
                             </label>
                             <div className="flex flex-col gap-6 mb-4">
@@ -90,14 +90,14 @@ export default function SavingsCalculator() {
                                     className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-tesla-primary"
                                 />
                             </div>
-                            <div className="flex justify-between text-xs text-gray-500">
-                                <span>MWK 20,000</span>
-                                <span>MWK 1,000,000+</span>
+                            <div className="flex justify-between text-xs text-white font-medium" style={{ color: 'white' }}>
+                                <span style={{ color: 'white' }}>MWK 20,000</span>
+                                <span style={{ color: 'white' }}>MWK 1,000,000+</span>
                             </div>
                         </div>
 
                         <div className="text-center bg-white/5 rounded-xl p-8 border border-white/5">
-                            <p className="text-gray-400 text-sm uppercase tracking-wide mb-2">Estimated 20-Year Savings</p>
+                            <p className="text-white text-sm uppercase tracking-wide mb-2 font-semibold" style={{ color: 'white' }}>Estimated 20-Year Savings</p>
                             <motion.div
                                 key={savings}
                                 initial={{ scale: 0.9, opacity: 0 }}
@@ -106,7 +106,7 @@ export default function SavingsCalculator() {
                             >
                                 MWK {savings.toLocaleString()}
                             </motion.div>
-                            <p className="text-gray-500 text-xs mt-2">
+                            <p className="text-gray-300 text-xs mt-2" style={{ color: 'white' }}>
                                 *Estimated savings based on current electricity rates and average inflation.
                             </p>
                         </div>
