@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  /* Tesla-inspired Color Palette */
+  --tesla-white: #ffffff;
+  --tesla-black: #000000;
+  --tesla-gray-50: #f8f9fa;
+  --tesla-gray-100: #e9ecef;
+  --tesla-gray-200: #dee2e6;
+  --tesla-gray-300: #ced4da;
+  --tesla-gray-400: #adb5bd;
+  --tesla-gray-500: #6c757d;
+  --tesla-gray-600: #495057;
+  --tesla-gray-700: #343a40;
+  --tesla-gray-800: #212529;
+  --tesla-gray-900: #171a20;
+
+  /* Primary accent - Tesla Energy Orange */
+  --tesla-primary: #FF6600;
+  --tesla-primary-hover: #CC5200;
+  --tesla-accent: #FF6600;
+
+  /* Background and foreground */
+  --background: var(--tesla-white);
+  --foreground: var(--tesla-black);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-tesla-white: var(--tesla-white);
+  --color-tesla-black: var(--tesla-black);
+  --color-tesla-gray-50: var(--tesla-gray-50);
+  --color-tesla-gray-100: var(--tesla-gray-100);
+  --color-tesla-gray-200: var(--tesla-gray-200);
+  --color-tesla-gray-300: var(--tesla-gray-300);
+  --color-tesla-gray-400: var(--tesla-gray-400);
+  --color-tesla-gray-500: var(--tesla-gray-500);
+  --color-tesla-gray-600: var(--tesla-gray-600);
+  --color-tesla-gray-700: var(--tesla-gray-700);
+  --color-tesla-gray-800: var(--tesla-gray-800);
+  --color-tesla-gray-900: var(--tesla-gray-900);
+  --color-tesla-primary: var(--tesla-primary);
+  --color-tesla-primary-hover: var(--tesla-primary-hover);
+  --color-tesla-accent: var(--tesla-accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--tesla-white);
+  color: var(--tesla-black);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+/* Tesla-inspired Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--tesla-black);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--tesla-gray-700);
+  max-width: none;
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tesla-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tesla-gray-400);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tesla-gray-500);
+}
+
+/* Clean selection */
+::selection {
+  background: var(--tesla-primary);
+  color: var(--tesla-white);
+}
+
+/* Tesla-style Buttons */
+.btn-tesla-primary {
+  @apply relative inline-flex items-center justify-center px-8 py-4 font-medium text-white transition-all duration-200 bg-tesla-black hover:bg-tesla-gray-900 focus:outline-none rounded-none text-sm tracking-wide;
+}
+
+.btn-tesla-secondary {
+  @apply relative inline-flex items-center justify-center px-8 py-4 font-medium text-tesla-black transition-all duration-200 bg-transparent border border-tesla-black hover:bg-tesla-black hover:text-white focus:outline-none rounded-none text-sm tracking-wide;
+}
+
+.btn-tesla-outline {
+  @apply relative inline-flex items-center justify-center px-8 py-4 font-medium text-tesla-black transition-all duration-200 bg-transparent hover:bg-tesla-gray-50 focus:outline-none rounded-none text-sm tracking-wide underline decoration-1 underline-offset-4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
